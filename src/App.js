@@ -1,23 +1,20 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-import { Button, DatePicker } from 'antd';
-
-
-function onChange(date, dateString) {
-  console.log(date, dateString);
+import Children from './children';
+const a = {
+  ba: 'tai',
+  x: 'zzz',
+  y: 'ssss'
 }
-function App() {
-  return (
-    <div className="App">
-      <Button
-        type="primary"
-        size="large"
-      >test</Button>
-      <DatePicker onChange={onChange} />
-      <br />
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      <>
+      <Children prj ={a}/>
+      </>
+    );
+  }
+
 }
 
 export default App;
