@@ -8,9 +8,11 @@ class Children extends React.Component {
       tes: {}
     }
   }
+
   componentDidMount() {
+    const obj = this.props.prj
     this.setState({
-      tes: this.props.prj
+      tes: obj
     })
   };
 
@@ -20,11 +22,14 @@ class Children extends React.Component {
     tes.ba = e.target.value;
     this.setState({
       tes: tes
-    })
+    },()=>{
+      console.log(tes);
+    });
   }
+
   render() {
-    console.log("this.props.prj", this.props.prj)
-    console.log("this.state.tes", this.state.tes);
+    // console.log("this.props.prj", this.props)
+    // console.log("this.state.tes", this.state.tes);
     return (
       <div className="App">
         <Button
