@@ -2,7 +2,7 @@ import { Form, Input, Button, message } from 'antd';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import icon from '../../assets/icon.jpeg';
-// import authentication from '../../utils/authentication';
+import authentication from '../../utils/authentication';
 import './ui.scss';
 
 const MESSAGE_LOGIN_FAIL =
@@ -29,12 +29,12 @@ const LoginPage = () => {
     });
   };
 
-  const onFinish = async () => {
+  const onFinish = async (user) => {
     setLoading(true);
     await sleep(500);
 
-    //const isTrue = authentication.userLogin(user);
-    //if (!isTrue) return onFinishFailed();
+    const isTrue = authentication.userLogin(user);
+    if (!isTrue) return onFinishFailed();
 
     setLoading(false);
     // message.success('Welcome! ;))))');
