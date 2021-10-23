@@ -1,5 +1,5 @@
 {
-  "name": "react-app",
+  "name": "antd-customize-theme",
   "version": "0.1.1",
   "private": true,
   "scripts": {
@@ -12,7 +12,6 @@
   "dependencies": {
     "antd": "^4.16.13",
     "axios": "^0.23.0",
-    "customize-cra": "^1.0.0",
     "history": "^5.0.1",
     "immutable": "^4.0.0",
     "react": "^17.0.2",
@@ -33,6 +32,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "babel-plugin-import": "^1.13.3",
     "css-loader": "5.2.6",
+    "customize-cra": "^1.0.0",
     "dotenv": "^10.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -75,5 +75,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:t-pk/antd-customize-theme.git"
+  },
+  "author": {
+    "name": "Antd customize theme",
+    "email": "pktai.iot@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "TaiPham",
+      "email": "pktai.iot@gmail.com",
+      "url": "https://github.com/pktai.iot"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pktai/antd-customize-theme/issues"
   }
 }
