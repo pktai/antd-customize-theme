@@ -6,8 +6,8 @@ import routes from './routes';
 import PublicRoute from './layouts/PublicRoute';
 import PrivateRoute from './layouts/PrivateRoute';
 
-const App = () => {
-  const showContent = (rt) => {
+class App extends React.Component {
+  showContent = (rt) => {
     let pages = [];
 
     if (rt.length > 0) {
@@ -48,7 +48,10 @@ const App = () => {
       </Switch>
     );
   };
-  return <Router> {showContent(routes)} </Router>;
-};
+
+  render() {
+    return <Router> {this.showContent(routes)} </Router>;
+  }
+}
 
 export default App;
