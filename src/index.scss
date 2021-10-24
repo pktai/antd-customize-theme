@@ -1,15 +1,15 @@
 // @import 'antd/dist/antd.css';
-// @import './scss/_config';
-// @import './scss/_mixins';
+@import './scss/_config';
+@import './scss/_mixins';
 
-// body {
-//   margin: 0;
-//   padding: 0;
-//   font-size: $fz-body;
-//   font-family: $f-family;
-//   background-color: $br-body !important;
-//   color: $c-primary !important;
-// }
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $fz-body;
+  font-family: $f-family;
+  background-color: $br-body !important;
+  color: $c-primary !important;
+}
 
 // /* FAKE SPIN */
 // .is-spining {

@@ -7,11 +7,11 @@ import PublicRoute from './layouts/PublicRoute';
 import PrivateRoute from './layouts/PrivateRoute';
 
 class App extends React.Component {
-  showContent = (rt) => {
+  showContent = (lines) => {
     let pages = [];
 
-    if (rt.length > 0) {
-      pages = rt.map((route) => {
+    if (lines.length > 0) {
+      pages = lines.map((route) => {
         return route.isPrivate ? (
           <PrivateRoute
             key={shortid()}
@@ -32,20 +32,10 @@ class App extends React.Component {
       });
     }
 
-    //pages.push(<Route key="login" render={() => <Redirect to="/login" />} />);
-
     return (
-      <Switch>
-        <Suspense
-          fallback={
-            <Spin>
-              <div className="is-spining" />
-            </Spin>
-          }
-        >
-          {pages}
-        </Suspense>{' '}
-      </Switch>
+      <Suspense fallback={<Spin />}>
+        <Switch>{pages}</Switch>
+      </Suspense>
     );
   };
 
