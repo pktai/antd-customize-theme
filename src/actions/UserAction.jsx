@@ -11,7 +11,14 @@ export const actGetUser = () => {
   return async (dispatch) => {
     return fetchApi('https://jsonplaceholder.typicode.com/users', 'GET').then(
       (response) => {
-        dispatch(fetchUsersSuccess(response.data));
+        let a = [];
+        let index = 0;
+        setInterval(() => {
+          a.push(response.data[index]);
+          index++;
+          dispatch(fetchUsersSuccess(a));
+        }, 3000);
+
         return true;
       },
       (error) => {

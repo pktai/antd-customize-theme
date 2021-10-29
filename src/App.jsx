@@ -1,13 +1,13 @@
 import React, { Suspense } from 'react';
-import { Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Switch, BrowserRouter } from 'react-router-dom';
 import { Spin } from 'antd';
 import shortid from 'shortid';
 import routes from './routes';
 import PublicRoute from './layouts/PublicRoute';
 import PrivateRoute from './layouts/PrivateRoute';
 
-class App extends React.Component {
-  showContent = (lines) => {
+const App = () => {
+  const showContent = (lines) => {
     let pages = [];
 
     if (lines.length > 0) {
@@ -39,9 +39,7 @@ class App extends React.Component {
     );
   };
 
-  render() {
-    return <Router> {this.showContent(routes)} </Router>;
-  }
-}
+  return <BrowserRouter> {showContent(routes)} </BrowserRouter>;
+};
 
 export default App;
