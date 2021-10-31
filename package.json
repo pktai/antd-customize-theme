@@ -5,6 +5,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "start:cre": "react-scripts start",
+    "start:prod": "yarn build && serve -s build",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
