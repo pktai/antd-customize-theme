@@ -17,7 +17,7 @@ export const actGetUser = () => {
           a.push(response.data[index]);
           index++;
           dispatch(fetchUsersSuccess(a));
-        }, 3000);
+        }, 300);
 
         return true;
       },

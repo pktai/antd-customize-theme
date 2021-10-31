@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Progress } from 'antd';
 
-const ProgressBar = (props) => {
+const ProgressBar = ({ percent }) => {
   return (
     <>
       <Progress
@@ -9,8 +10,8 @@ const ProgressBar = (props) => {
           from: '#50C878',
           to: '#50C878',
         }}
-        style={{ color: 'white', padding: '12px' }}
-        percent={Number(props.percent).toFixed(2)}
+        style={{ color: 'white', padding: '14px' }}
+        percent={Number(percent).toFixed(1)}
         status="active"
       />
     </>
@@ -18,7 +19,7 @@ const ProgressBar = (props) => {
 };
 
 ProgressBar.propTypes = {
-  percent: PropTypes.Number,
+  percent: PropTypes.number,
 };
 
 export default ProgressBar;

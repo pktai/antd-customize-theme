@@ -66,7 +66,7 @@ const LoginPage = () => {
           name="password"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <Input.Password />
+          <Input.Password autoComplete="false" />
         </Form.Item>
 
         <Form.Item>
