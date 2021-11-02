@@ -39,7 +39,7 @@ instanceNext.interceptors.response.use(
   (error) => {
     // token expiry
     if (
-      // error.response &&
+      error.response &&
       // error.response.status === 401 &&
       !isShowModalExpried
     ) {
@@ -59,6 +59,7 @@ instanceNext.interceptors.response.use(
         },
         className: 'modal-expired-token',
       });
+      return;
     } else {
       message.error({
         duration: 1,

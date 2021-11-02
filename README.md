@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
+<a href="https://ant.design/"  target="blank"><img  src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"  width="100"  alt="Antd Logo" /></a>
+<a href="https://reactjs.org/"  target="blank"><img  src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"  width="100"  alt="React Logo" /></a>
+<a href="https://webpack.js.org/"  target="blank"><img  src="https://raw.githubusercontent.com/webpack/media/3e52c178e6ad2428585a2cbf5d22d6dbe0697f0f/logo/icon.svg"  width="100"  alt="Webpack Logo" /></a>
 
-In the project directory, you can run:
+<p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/badge/yarn-1.22.17-brightgreen" alt="Yarn Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/badge/node-16.13.0-orange" alt="Node Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/badge/webpack-4.44.1-orange" alt="webpack Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/badge/antd-4.16.3-blue" alt="antd Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/badge/react-17.0.2-blue" alt="react Version" /></a>
+</p>
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This source code to help you get started with React, antdesign with customize.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Installation
+Source code works on Node version `16.13.0` and Yarn version `1.22.17`. If you don't have it, install it first.
+The setup and startup steps I describe in the Installation section.
 
-### `npm test`
+```bash
+1. Open Git bash.
+2. git clone https://github.com/t-pk/antd-customize-theme.git.
+3. cd antd-customize-theme.
+4. yarn. // install library.
+5. setup .env file. Please open the file `env.example` and set the environment variables properly.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+Below are the variables in env.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+REACT_APP_NODE_ENV=dev
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#ENV config production add field.
+#REACT_APP_NODE_ENV=production
+#GENERATE_SOURCEMAP=false
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Running the app
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# development
+$ yarn start
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# production mode
+$ yarn start:prod
+```
+## Support
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If there is a problem in the source code, please open the Issues tab or click [here](https://github.com/pktai/antd-customize-theme/issues). I'm really grateful to the contributors. It motivates me to go further.
 
-## Learn More
+## Stay in touch
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Author - [Tai Pham](https://facebook.com/pktai.iot)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  [MIT licensed](LICENSE).

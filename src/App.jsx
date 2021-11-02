@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Switch, BrowserRouter } from 'react-router-dom';
 import { Spin } from 'antd';
 import shortid from 'shortid';
 import routes from './routes';
@@ -7,11 +7,11 @@ import PublicRoute from './layouts/PublicRoute';
 import PrivateRoute from './layouts/PrivateRoute';
 
 const App = () => {
-  const showContent = (rt) => {
+  const showContent = (lines) => {
     let pages = [];
 
-    if (rt.length > 0) {
-      pages = rt.map((route) => {
+    if (lines.length > 0) {
+      pages = lines.map((route) => {
         return route.isPrivate ? (
           <PrivateRoute
             key={shortid()}
@@ -32,23 +32,14 @@ const App = () => {
       });
     }
 
-    //pages.push(<Route key="login" render={() => <Redirect to="/login" />} />);
-
     return (
-      <Switch>
-        <Suspense
-          fallback={
-            <Spin>
-              <div className="is-spining" />
-            </Spin>
-          }
-        >
-          {pages}
-        </Suspense>{' '}
-      </Switch>
+      <Suspense fallback={<Spin />}>
+        <Switch>{pages}</Switch>
+      </Suspense>
     );
   };
-  return <Router> {showContent(routes)} </Router>;
+
+  return <BrowserRouter> {showContent(routes)} </BrowserRouter>;
 };
 
 export default App;

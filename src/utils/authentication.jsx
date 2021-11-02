@@ -1,3 +1,5 @@
+import { TOKEN_KEY } from '../constants';
+
 const initUser = {
   username: 'admin',
   password: 'admin',
@@ -12,6 +14,7 @@ class Authentication {
       initUser.password !== user.password
     )
       return null;
+    localStorage.setItem(TOKEN_KEY, TOKEN_KEY);
     return user;
   };
 }

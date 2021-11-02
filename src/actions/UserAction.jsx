@@ -11,7 +11,14 @@ export const actGetUser = () => {
   return async (dispatch) => {
     return fetchApi('https://jsonplaceholder.typicode.com/users', 'GET').then(
       (response) => {
-        dispatch(fetchUsersSuccess(response.data));
+        let a = [];
+        let index = 0;
+        setInterval(() => {
+          a.push(response.data[index]);
+          index++;
+          dispatch(fetchUsersSuccess(a));
+        }, 300);
+
         return true;
       },
       (error) => {
@@ -23,10 +30,14 @@ export const actGetUser = () => {
 
 export const actDelLanguage = () => {
   return Promise.all([
-    fetchApi('https://pktai.herokuapp.com/api/languages/1232', 'DELETE'),
-    fetchApi('https://pktai.herokuapp.com/api/languages/1233', 'DELETE'),
-    fetchApi('https://pktai.herokuapp.com/api/languages/1234', 'DELETE'),
-    fetchApi('https://pktai.herokuapp.com/api/languages/1235', 'DELETE'),
+    fetchApi(
+      'https://run.mocky.io/v3/c89baede-c9cb-4c68-b3f8-0195537a9d6c',
+      'GET',
+    ),
+    fetchApi(
+      'https://run.mocky.io/v3/c89baede-c9cb-4c68-b3f8-0195537a9d6c',
+      'GET',
+    ),
   ])
     .then(() => true)
     .catch(() => {
@@ -35,7 +46,10 @@ export const actDelLanguage = () => {
 };
 
 export const actGetLanguage = () => {
-  return fetchApi('https://pktai.herokuapp.com/api/languages', 'GET').then(
+  return fetchApi(
+    'https://run.mocky.io/v3/c89baede-c9cb-4c68-b3f8-0195537a9d6c',
+    'GET',
+  ).then(
     () => {
       // console.log('get', response);
       return true;
