@@ -3,12 +3,12 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "react-builder start",
     "start:cre": "react-scripts start",
     "start:prod": "yarn build && serve -s build",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "build": "react-builder build",
+    "test": "react-builder test",
+    "eject": "react-builder eject"
   },
   "dependencies": {
     "antd": "^4.16.13",
@@ -16,7 +16,7 @@
     "history": "^5.0.1",
     "immutable": "^4.0.0",
     "react": "^17.0.2",
-    "react-app-rewired": "^2.1.8",
+    "react-builder": "https://github.com/t-pk/react-builder.git#0.0.1",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
