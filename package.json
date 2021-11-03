@@ -16,7 +16,7 @@
     "history": "^5.0.1",
     "immutable": "^4.0.0",
     "react": "^17.0.2",
-    "react-builder": "https://github.com/t-pk/react-builder.git#0.0.1",
+    "react-builder": "https://github.com/t-pk/react-builder.git#0.1.1",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
