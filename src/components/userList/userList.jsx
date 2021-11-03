@@ -9,43 +9,25 @@ const columns = [
     dataIndex: 'id',
   },
   {
-    title: 'Name',
-    dataIndex: 'name',
+    title: 'Full Name',
+    dataIndex: 'fullName',
+  },
+  {
+    title: 'Gender',
+    dataIndex: 'gender',
   },
   {
     title: 'Phone Number',
-    dataIndex: 'phone',
-    // sorter: (a, b) => a.age - b.age,
-  },
-  {
-    title: 'Website',
-    dataIndex: 'website',
-    // sorter: (a, b) => a.age - b.age,
+    dataIndex: 'phoneNumber',
   },
   {
     title: 'Email',
     dataIndex: 'email',
-    // sorter: (a, b) => a.age - b.age,
   },
 
   {
     title: 'Address',
     dataIndex: 'address',
-    // render: () => (data, e) => {
-    //   console.log('data', data);
-    //   console.log('e', e);
-    // },
-    // filters: [
-    //   {
-    //     text: 'London',
-    //     value: 'London',
-    //   },
-    //   {
-    //     text: 'New York',
-    //     value: 'New York',
-    //   },
-    // ],
-    // onFilter: (value, record) => record.address.indexOf(value) === 0,
   },
   {
     title: 'Action',
@@ -274,7 +256,10 @@ export default class UserList extends Component {
         </Form>
         <Table
           {...this.state}
-          pagination={{ position: [this.state.top, this.state.bottom] }}
+          pagination={{
+            position: [this.state.top, this.state.bottom],
+            defaultPageSize: 50,
+          }}
           columns={tableColumns}
           dataSource={state.hasData ? this.props.users : null}
           scroll={scroll}
@@ -292,8 +277,8 @@ UserList.defaultProps = {
 UserList.propTypes = {
   users: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      fullName: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
     }),
   ),
